@@ -10,6 +10,9 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -20,47 +23,18 @@ import org.jetbrains.annotations.Nullable;
 
 @Environment(EnvType.CLIENT)
 public class Nurarihyon extends Mob {
-    private static final int ATTACK_DAMAGE = 50 ;
-    private static final int MAX_HEALTH = 2500;
-    private static final int KNOCKBACK_RESISTANCE = 5;
-    private static final int DARKNESS_DISPLAY_LIMIT = 200;
-    private static final int DARKNESS_DURATION = 260;
-    private static final int DARKNESS_RADIUS = 20;
-    private static final int DARKNESS_INTERVAL = 120;
 
     public Nurarihyon(EntityType<? extends Mob> entityType, Level level) {
         super(entityType, level);
         this.xpReward = 25;
-        this.getNavigation().setCanFloat(true);
         this.setPathfindingMalus(BlockPathTypes.UNPASSABLE_RAIL, 0.0F);
-        this.setPathfindingMalus(BlockPathTypes.DAMAGE_OTHER, 8.0F);
         this.setPathfindingMalus(BlockPathTypes.POWDER_SNOW, 8.0F);
-    }
-
-    public static int getDarknessInterval() {
-        return DARKNESS_INTERVAL;
-    }
-
-    public static int getDarknessRadius() {
-        return DARKNESS_RADIUS;
-    }
-
-    public static int getDarknessDuration() {
-        return DARKNESS_DURATION;
-    }
-
-    public static int getDarknessDisplayLimit() {
-        return DARKNESS_DISPLAY_LIMIT;
-    }
-
-    public static int getAttackDamage() {
-        return ATTACK_DAMAGE;
     }
 
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ALLAY_DEATH;
+        return SoundEvents.WITHER_SKELETON_AMBIENT;
     }
     @Nullable
     @Override
@@ -68,9 +42,6 @@ public class Nurarihyon extends Mob {
         return SoundEvents.WARDEN_DEATH;
     }
 
-    public static int getKnockbackResistance() {
-        return KNOCKBACK_RESISTANCE;
-    }
 
     @Nullable
     @Override
@@ -81,11 +52,8 @@ public class Nurarihyon extends Mob {
     protected void populateDefaultEquipmentSlots(RandomSource randomSource, DifficultyInstance difficultyInstance) {
         this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(NRItems.NENEKIRIMARU));
     }
-    protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
-        return 2.1F;
-    }
 
-    public boolean canBeAffected(MobEffectInstance mobEffectInstance) {
-        return mobEffectInstance.getEffect() == MobEffects.DARKNESS ? false : super.canBeAffected(mobEffectInstance);
+    public static AttributeSupplier.Builder createNurarihyonAttributes() {
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 2500).add(Attributes.ATTACK_DAMAGE, 50);
     }
 }

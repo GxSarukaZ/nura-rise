@@ -8,7 +8,7 @@ import net.namozdizex.nura.entity.Nurarihyon;
 
 public class NurarihyonRenderer extends MobRenderer<Nurarihyon, NurarihyonModel<Nurarihyon>> {
     public NurarihyonRenderer(EntityRendererProvider.Context context) {
-        super(context, new NurarihyonModel(context.bakeLayer(NurarihyonModel.LAYER_LOCATION)), 1.0F);
+        super(context, new NurarihyonModel(context.bakeLayer(NurarihyonModel.LAYER_LOCATION)), 0.5F);
     }
 
     @Override

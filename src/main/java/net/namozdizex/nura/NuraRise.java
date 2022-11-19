@@ -2,9 +2,11 @@ package net.namozdizex.nura;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.namozdizex.nura.entity.Nurarihyon;
 import net.namozdizex.nura.registry.NRBlocks;
 import net.namozdizex.nura.registry.NREntity;
 import net.namozdizex.nura.registry.NRItems;
@@ -23,5 +25,7 @@ public class NuraRise implements ModInitializer {
 		NRItems.init();
 		NRBlocks.init();
 		NREntity.init();
+
+		FabricDefaultAttributeRegistry.register(NREntity.NURARIHYON, Nurarihyon.createMobAttributes());
 	}
 }
