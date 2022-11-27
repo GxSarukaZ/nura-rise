@@ -16,9 +16,6 @@ public class NRItems
 
     public static final Item SHIKIGAMI = new Item(new Item.Properties().tab(NuraRise.TAB));
 
-    public static final SpawnEggItem NURARIHYON_SPAWN_EGG    = new SpawnEggItem(NREntity.NURARIHYON, 650786, 867307, new Item.Properties().tab(NuraRise.TAB));
-
-
     public static void init() {
         register("nenekirimaru", NENEKIRIMARU);
         register("demon_lord_hammer", DEMON_LORD_HAMMER);
@@ -26,8 +23,6 @@ public class NRItems
         register("final_demon_lord_hammer", FINAL_DEMON_LORD_HAMMER);
 
         register("shikigami", SHIKIGAMI);
-
-        register("nurarihyon_spawn_egg",NURARIHYON_SPAWN_EGG);
 
     }
     private static void register(String key, Item item)

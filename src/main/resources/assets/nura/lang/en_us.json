@@ -12,6 +12,10 @@
   "block.nura.soul_yokai_lamp": "Soul Yokai Lamp",
   "block.nura.tatami_block": "Tatami Block",
   "block.nura.tsugikumo_web_block": "Tsugikumo Web Block",
+  "block.nura.ice_yokai_cluster": "Ice Yokai Cluster",
+  "block.nura.small_ice_yokai_bud": "Small Ice Yokai Bud",
+  "block.nura.medium_ice_yokai_bud": "Medium Ice Yokai Bud",
+  "block.nura.large_ice_yokai_bud": "Large Ice Yokai Bud",
 
   "item.nura.nurarihyon_spawn_egg": "Nurarihyon Spawn Egg"
 }
