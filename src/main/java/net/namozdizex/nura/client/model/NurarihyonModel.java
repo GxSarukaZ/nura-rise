@@ -53,12 +53,16 @@ public class NurarihyonModel<T extends Nurarihyon> extends EntityModel<T> {
 
     @Override
     public void setupAnim(T entity, float f, float g, float h, float i, float j) {
-        this.leg1.yRot = (float) Math.ceil(h / 4 * Math.PI);
-        this.leg2.yRot = (float) Math.ceil(h / 4 * Math.PI);
+
     }
 
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int i, int j, float f, float g, float h, float k) {
-        body.render(poseStack, vertexConsumer, i, j, f, g, h, k);
+        head.render(poseStack, vertexConsumer, i, j, f, g, h, k);
+        body.render(poseStack, vertexConsumer, i , j ,f ,g ,h ,k);
+        arm1.render(poseStack, vertexConsumer, i ,j ,f ,g ,h ,k);
+        arm2.render(poseStack, vertexConsumer, i ,j ,f ,g ,h ,k);
+        leg1.render(poseStack, vertexConsumer, i, j, f, g, h, k);
+        leg2.render(poseStack, vertexConsumer, i, j, f, g, h, k);
     }
 }

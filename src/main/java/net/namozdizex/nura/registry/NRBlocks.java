@@ -18,11 +18,15 @@ public class NRBlocks
 {
     public static final Block YOKAI_LAMP = new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(1.0F,15.5F).noCollission());
     public static final Block SOUL_YOKAI_LAMP = new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(1.0F,15.5F).noCollission());
+    public static final Block TATAMI_BLOCK = new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).requiresCorrectToolForDrops().strength(1.2f, 0.5f));
+    public static final Block TSUGIKUMO_WEB_BLOCK = new Block(BlockBehaviour.Properties.of(Material.WEB).sound(SoundType.SLIME_BLOCK).requiresCorrectToolForDrops().strength(10.5f, 25.5f));
 
     public static void init()
     {
         register("yokai_lamp", YOKAI_LAMP, new Item.Properties().tab(NuraRise.TAB));
         register("soul_yokai_lamp", SOUL_YOKAI_LAMP, new Item.Properties().tab(NuraRise.TAB));
+        register("tatami_block", TATAMI_BLOCK, new Item.Properties().tab(NuraRise.TAB));
+        register("tsugikumo_web_block", TSUGIKUMO_WEB_BLOCK, new Item.Properties().tab(NuraRise.TAB));
     }
 
     public static void register(String key, Block block, Object o)

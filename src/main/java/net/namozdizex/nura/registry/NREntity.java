@@ -13,7 +13,6 @@ import net.namozdizex.nura.entity.Nurarihyon;
 public class NREntity
 {
     public static final EntityType<Nurarihyon> NURARIHYON = FabricEntityTypeBuilder.create(MobCategory.CREATURE, Nurarihyon::new).dimensions(EntityDimensions.fixed(0.7F,0.4F)).build();
-
     public static void init() {
 
         register("nurarihyon",NURARIHYON);

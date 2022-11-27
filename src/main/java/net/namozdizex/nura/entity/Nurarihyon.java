@@ -7,13 +7,10 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -26,9 +23,6 @@ public class Nurarihyon extends Mob {
 
     public Nurarihyon(EntityType<? extends Mob> entityType, Level level) {
         super(entityType, level);
-        this.xpReward = 25;
-        this.setPathfindingMalus(BlockPathTypes.UNPASSABLE_RAIL, 0.0F);
-        this.setPathfindingMalus(BlockPathTypes.POWDER_SNOW, 8.0F);
     }
 
     @Nullable
@@ -54,6 +48,6 @@ public class Nurarihyon extends Mob {
     }
 
     public static AttributeSupplier.Builder createNurarihyonAttributes() {
-        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 2500).add(Attributes.ATTACK_DAMAGE, 50);
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 500).add(Attributes.ATTACK_DAMAGE, 50).add(Attributes.KNOCKBACK_RESISTANCE, 50);
     }
 }
