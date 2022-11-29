@@ -13,6 +13,7 @@ public class NRItems
     public static final Item DEMON_LORD_HAMMER = new YokaiSwordItem(new Item.Properties().tab(NuraRise.TAB));
     public static final Item FINAL_DEMON_LORD_HAMMER = new YokaiSwordItem(new Item.Properties().tab(NuraRise.TAB));
     public static final Item NENEKIRIMARU2 = new YokaiSwordItem(new Item.Properties().tab(NuraRise.TAB));
+    public static final Item ICE_SHARD = new Item(new Item.Properties().tab(NuraRise.TAB));
 
     public static final Item SHIKIGAMI = new Item(new Item.Properties().tab(NuraRise.TAB));
 
@@ -23,6 +24,7 @@ public class NRItems
         register("final_demon_lord_hammer", FINAL_DEMON_LORD_HAMMER);
 
         register("shikigami", SHIKIGAMI);
+        register("ice_shard", ICE_SHARD);
 
     }
     private static void register(String key, Item item)
