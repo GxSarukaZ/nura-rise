@@ -20,10 +20,11 @@ public class NuraRiseClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlocks(translucent, NRBlocks.TATAMI_BLOCK);
         BlockRenderLayerMap.INSTANCE.putBlocks(translucent, NRBlocks.TSUGIKUMO_WEB_BLOCK);
-        BlockRenderLayerMap.INSTANCE.putBlocks(translucent, NRBlocks.ICE_YOKAI_CLUSTER);
-        BlockRenderLayerMap.INSTANCE.putBlocks(translucent, NRBlocks.SMALL_ICE_YOKAI_BUD);
-        BlockRenderLayerMap.INSTANCE.putBlocks(translucent, NRBlocks.MEDIUM_ICE_YOKAI_BUD);
-        BlockRenderLayerMap.INSTANCE.putBlocks(translucent, NRBlocks.LARGE_ICE_YOKAI_BUD);
+
+        BlockRenderLayerMap.INSTANCE.putBlocks(cutout, NRBlocks.ICE_YOKAI_CLUSTER);
+        BlockRenderLayerMap.INSTANCE.putBlocks(cutout, NRBlocks.SMALL_ICE_YOKAI_BUD);
+        BlockRenderLayerMap.INSTANCE.putBlocks(cutout, NRBlocks.MEDIUM_ICE_YOKAI_BUD);
+        BlockRenderLayerMap.INSTANCE.putBlocks(cutout, NRBlocks.LARGE_ICE_YOKAI_BUD);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(cutout, NRBlocks.YOKAI_LAMP);
         BlockRenderLayerMap.INSTANCE.putBlocks(cutout, NRBlocks.SOUL_YOKAI_LAMP);

@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.namozdizex.nura.NuraRise"
+    ],
+    "client": [
+      "net.namozdizex.nura.NuraRiseClient"
     ]
   },
   "mixins": [
