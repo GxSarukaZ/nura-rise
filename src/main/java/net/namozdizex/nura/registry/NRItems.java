@@ -13,9 +13,12 @@ public class NRItems
     public static final Item DEMON_LORD_HAMMER = new YokaiSwordItem(new Item.Properties().tab(NuraRise.TAB));
     public static final Item FINAL_DEMON_LORD_HAMMER = new YokaiSwordItem(new Item.Properties().tab(NuraRise.TAB));
     public static final Item NENEKIRIMARU2 = new YokaiSwordItem(new Item.Properties().tab(NuraRise.TAB));
-    public static final Item ICE_SHARD = new Item(new Item.Properties().tab(NuraRise.TAB));
 
+    public static final Item ICE_SHARD = new Item(new Item.Properties().tab(NuraRise.TAB));
     public static final Item SHIKIGAMI = new Item(new Item.Properties().tab(NuraRise.TAB));
+    public static final Item YOKAI_BLADE = new Item(new Item.Properties().tab(NuraRise.TAB));
+    public static final Item YOKAI_HANDLE = new Item(new Item.Properties().tab(NuraRise.TAB));
+    public static final Item YOKAI_SOUL = new Item(new Item.Properties().tab(NuraRise.TAB));
 
     public static void init() {
         register("nenekirimaru", NENEKIRIMARU);
@@ -25,6 +28,9 @@ public class NRItems
 
         register("shikigami", SHIKIGAMI);
         register("ice_shard", ICE_SHARD);
+        register("yokai_blade", YOKAI_BLADE);
+        register("yokai_handle", YOKAI_HANDLE);
+        register("yokai_soul", YOKAI_SOUL);
 
     }
     private static void register(String key, Item item)

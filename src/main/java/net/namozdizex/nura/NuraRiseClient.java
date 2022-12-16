@@ -28,6 +28,7 @@ public class NuraRiseClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlocks(cutout, NRBlocks.YOKAI_LAMP);
         BlockRenderLayerMap.INSTANCE.putBlocks(cutout, NRBlocks.SOUL_YOKAI_LAMP);
+        BlockRenderLayerMap.INSTANCE.putBlocks(cutout, NRBlocks.BLADE_STAND);
 
         EntityRendererRegistry.register(NREntity.NURARIHYON, NurarihyonRenderer::new);
 
