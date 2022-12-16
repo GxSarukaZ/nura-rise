@@ -5,11 +5,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SpawnEggItem;
 import net.namozdizex.nura.NuraRise;
+import net.namozdizex.nura.world.item.RihyonSwordItem;
 import net.namozdizex.nura.world.item.YokaiSwordItem;
 
 public class NRItems
 {
-    public static final Item NENEKIRIMARU = new YokaiSwordItem(new Item.Properties().tab(NuraRise.TAB));
+    public static final Item NENEKIRIMARU = new RihyonSwordItem(new Item.Properties().tab(NuraRise.TAB));
     public static final Item DEMON_LORD_HAMMER = new YokaiSwordItem(new Item.Properties().tab(NuraRise.TAB));
     public static final Item FINAL_DEMON_LORD_HAMMER = new YokaiSwordItem(new Item.Properties().tab(NuraRise.TAB));
     public static final Item NENEKIRIMARU2 = new YokaiSwordItem(new Item.Properties().tab(NuraRise.TAB));

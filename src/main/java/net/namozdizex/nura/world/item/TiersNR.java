@@ -9,7 +9,8 @@ import java.util.function.Supplier;
 
 public enum TiersNR implements Tier {
 
-    YOKAI_HEART(2, 375, 6.5F, 2.5F, 14, () -> Ingredient.of(NRItems.SHIKIGAMI));
+    YOKAI_HEART(2, 375, 6.5F, 2.5F, 14, () -> Ingredient.of(NRItems.SHIKIGAMI)),
+    RIHYON(2, 375, 6.5F, 2.5F, 14, () -> Ingredient.of(NRItems.YOKAI_SOUL));
 
     private final int level;
     private final int uses;
