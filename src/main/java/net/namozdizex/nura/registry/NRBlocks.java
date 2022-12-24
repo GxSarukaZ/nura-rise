@@ -29,6 +29,7 @@ public class NRBlocks
     public static final Block MEDIUM_ICE_YOKAI_BUD = new IceYokaiClusterBlock(4, 3, BlockBehaviour.Properties.of(Material.AMETHYST).sound(SoundType.AMETHYST_CLUSTER).lightLevel(state -> 4).requiresCorrectToolForDrops().strength(1.5F).noCollission().isValidSpawn(NRBlocks::never).isSuffocating(NRBlocks::never).isViewBlocking(NRBlocks::never));
     public static final Block LARGE_ICE_YOKAI_BUD = new IceYokaiClusterBlock(5, 3, BlockBehaviour.Properties.of(Material.AMETHYST).sound(SoundType.AMETHYST_CLUSTER).lightLevel(state -> 5).requiresCorrectToolForDrops().strength(1.5F).noCollission().isValidSpawn(NRBlocks::never).isSuffocating(NRBlocks::never).isViewBlocking(NRBlocks::never));
     public static final Block BLADE_STAND = new BladeStandBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).requiresCorrectToolForDrops().strength(0.3f, 5.4f).noCollission());
+    public static final Block UNFIRE_YOKAI_LAMP = new YokaiLampBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().noCollission());
 
     public static void init()
     {
@@ -41,6 +42,7 @@ public class NRBlocks
         register("medium_ice_yokai_bud", MEDIUM_ICE_YOKAI_BUD, new Item.Properties().tab(NuraRise.TAB));
         register("large_ice_yokai_bud", LARGE_ICE_YOKAI_BUD, new Item.Properties().tab(NuraRise.TAB));
         register("blade_stand", BLADE_STAND, new Item.Properties().tab(NuraRise.TAB));
+        register("unfire_yokai_lamp", UNFIRE_YOKAI_LAMP, new Item.Properties().tab(NuraRise.TAB));
     }
 
     public static void register(String key, Block block, Object o)

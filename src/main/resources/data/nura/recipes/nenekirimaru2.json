@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "nura:yokai_sword_unfinish"
+    },
+    "X": {
+      "item": "nura:yokai_soul"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XXX"
+  ],
+  "result": {
+    "item": "nura:nenekirimaru2"
+  }
+}

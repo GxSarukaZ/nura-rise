@@ -3,6 +3,7 @@
   "item.nura.nenekirimaru2": "Nenekirinaru [ Second Form ]",
   "item.nura.demon_lord_hammer": "Demon Lord Hammer",
   "item.nura.final_demon_lord_hammer": "Final Demon Lord Hammer",
+  "item.nura.yokai_sword_unfinish": "Yokai Sword[ Unfinish ]",
 
   "item.nura.shikigami": "Shikigami",
   "item.nura.ice_shard": "Ice Shard",
@@ -21,6 +22,7 @@
   "block.nura.medium_ice_yokai_bud": "Medium Ice Yokai Bud",
   "block.nura.large_ice_yokai_bud": "Large Ice Yokai Bud",
   "block.nura.blade_stand": "Blade Stand",
+  "block.nura.unfire_yokai_lamp": "Unfire Yokai Lamp",
 
   "item.nura.nurarihyon_spawn_egg": "Nurarihyon Spawn Egg"
 }
