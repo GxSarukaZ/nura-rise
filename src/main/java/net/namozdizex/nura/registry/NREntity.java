@@ -10,14 +10,15 @@ import net.minecraft.world.entity.MobCategory;
 import net.namozdizex.nura.NuraRise;
 import net.namozdizex.nura.entity.Nurarihyon;
 
-public class NREntity
-{
-    public static final EntityType<Nurarihyon> NURARIHYON = FabricEntityTypeBuilder.create(MobCategory.CREATURE, Nurarihyon::new).dimensions(EntityDimensions.fixed(0.7F,0.4F)).build();
-    public static void init() {
+public class NREntity {
 
-        register("nurarihyon",NURARIHYON);
+    public static final EntityType<Nurarihyon> NURARIHYON = FabricEntityTypeBuilder.create(MobCategory.CREATURE, Nurarihyon::new).dimensions(EntityDimensions.fixed(0.75F, 0.55F)).trackRangeBlocks(4).build();
 
+    public static void init()
+    {
+        register("nurarihyon", NURARIHYON);
     }
+
     private static <T extends Entity> EntityType<T> register(String key, EntityType<T> type)
     {
         return Registry.register(Registry.ENTITY_TYPE, new ResourceLocation(NuraRise.MOD_ID, key), type);
