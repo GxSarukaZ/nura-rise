@@ -27,5 +27,6 @@ public class NuraRise implements ModInitializer {
 		NREntity.init();
 
 		FabricDefaultAttributeRegistry.register(NREntity.NURARIHYON, Nurarihyon.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(NREntity.NURARIHAN, Nurarihyon.createMobAttributes());
 	}
 }

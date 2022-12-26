@@ -23,6 +23,7 @@ public class NRItems
     public static final Item YOKAI_SOUL = new Item(new Item.Properties().tab(NuraRise.TAB));
 
     public static final Item NURARIHYON_SPAWN_EGG = new SpawnEggItem(NREntity.NURARIHYON, 0xab06fa, 0xfbe804, new Item.Properties().tab(NuraRise.TAB));
+    public static final Item NURARIHAN_SPAWN_EGG = new SpawnEggItem(NREntity.NURARIHAN, 0x030000, 0x116800, new Item.Properties().tab(NuraRise.TAB));
 
     public static void init() {
         register("nenekirimaru", NENEKIRIMARU);
@@ -38,6 +39,7 @@ public class NRItems
         register("yokai_soul", YOKAI_SOUL);
 
         register("nurarihyon_spawn_egg", NURARIHYON_SPAWN_EGG);
+        register("nurarihan_spawn_egg", NURARIHAN_SPAWN_EGG);
     }
     private static void register(String key, Item item)
     {

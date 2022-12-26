@@ -14,33 +14,22 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.piglin.AbstractPiglin;
-import net.minecraft.world.entity.npc.AbstractVillager;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.namozdizex.nura.registry.NRItems;
 
-public class Nurarihyon extends Monster {
-    public Nurarihyon(EntityType<? extends Monster> entityType, Level level) {
+public class Nurarihan extends Monster {
+    public Nurarihan(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
-        this.setPathfindingMalus(BlockPathTypes.LAVA, 8.0F);
     }
 
     protected void registerGoals() {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, AbstractPiglin.class, true));
-        this.addBehaviourGoals();
-    }
-
-    protected void addBehaviourGoals() {
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, AbstractVillager.class, false));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, IronGolem.class, true));
+        super.registerGoals();
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -69,14 +58,16 @@ public class Nurarihyon extends Monster {
         if (entity instanceof Creeper creeper) {
             if (creeper.canDropMobsSkull()) {
                 creeper.increaseDroppedSkulls();
-                this.spawnAtLocation(NRItems.YOKAI_HANDLE);
+                this.spawnAtLocation(NRItems.YOKAI_BLADE);
             }
         }
 
     }
+
     protected void populateDefaultEquipmentSlots(RandomSource randomSource, DifficultyInstance difficultyInstance) {
-        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(NRItems.NENEKIRIMARU));
+        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(NRItems.NENEKIRIMARU2));
     }
+
     protected void populateDefaultEquipmentEnchantments(RandomSource randomSource, DifficultyInstance difficultyInstance) {
     }
 
@@ -91,6 +82,7 @@ public class Nurarihyon extends Monster {
             return true;
         }
     }
+
     public boolean canBeAffected(MobEffectInstance mobEffectInstance) {
         return mobEffectInstance.getEffect() == MobEffects.DARKNESS ? false : super.canBeAffected(mobEffectInstance);
     }
